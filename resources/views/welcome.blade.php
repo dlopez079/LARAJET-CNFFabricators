@@ -52,13 +52,14 @@
             </div>
         @endif
 
-        @livewire('hero-section')
-        @livewire('gallery-section')
-        @livewire('service-section')
-        @livewire('about-section')
-        @livewire('contact-section')
+        <div class="container">
+            @livewire('hero-section')
+            @livewire('gallery-section')
+            @livewire('service-section')
+            @livewire('about-section')
+            @livewire('contact-section')
+        </div>
 
-    
     </div>
 
     @livewireScripts
