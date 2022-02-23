@@ -1,3 +1,3 @@
-<div>
-    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
-</div>
+<section id="hero" class="block border border-black bg-decoration-amber-300">
+    <h1>HERO SECTION</h1>
+</section>
