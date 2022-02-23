@@ -51,13 +51,15 @@
                 @endauth
             </div>
         @endif
-    </div>
 
-    @livewire('hero-section')
-    @livewire('gallery-section')
-    @livewire('service-section')
-    @livewire('about-section')
-    @livewire('contact-section')
+        @livewire('hero-section')
+        @livewire('gallery-section')
+        @livewire('service-section')
+        @livewire('about-section')
+        @livewire('contact-section')
+
+    
+    </div>
 
     @livewireScripts
 </body>
