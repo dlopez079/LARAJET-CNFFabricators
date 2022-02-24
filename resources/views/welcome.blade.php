@@ -37,8 +37,8 @@
     <div>
 
             @livewire('hero-section')
-            @livewire('gallery-section')
             @livewire('service-section')
+            @livewire('gallery-section')
             @livewire('about-section')
             @livewire('logo-clouds-section')
             @livewire('contact-section')
