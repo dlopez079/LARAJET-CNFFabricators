@@ -4,7 +4,7 @@
     <div class="relative bg-white shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-                
+
                 {{-- COMPANY ICON --}}
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                     <a href="#">
@@ -41,13 +41,24 @@
                 </nav>
 
                 {{-- SIGN IN / SIGN UP DIV --}}
-                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign
-                        in </a>
-                    <a href="#"
-                        class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-orange-600 hover:bg-orange-700">
-                        Sign up </a>
-                </div>
+
+                @if (Route::has('login'))
+                    <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                        @auth
+                            <a href="{{ url('/dashboard') }}"
+                                class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}"
+                                class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign
+                                in</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}"
+                                    class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-orange-600 hover:bg-orange-700">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
 
             </div>
         </div>
@@ -167,8 +178,7 @@
 
     {{-- MAIN HERO AREA: 
         There are two sections.  
-        The left side contains text and the right side contains an image. 
-        --}}
+        The left side contains text and the right side contains an image. --}}
     <main class="lg:relative">
 
         {{-- Text Side --}}
@@ -199,9 +209,7 @@
 
         {{-- Image Side --}}
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-            <img class="absolute inset-0 w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                alt="">
+            <img class="absolute inset-0 w-full h-full object-cover" src="{{ asset('img/hero-image.jpg') }}" alt="">
         </div>
     </main>
     </div>
