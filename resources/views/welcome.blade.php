@@ -34,7 +34,7 @@
 </head>
 
 <body class="antialiased">
-    <div class="container">
+    <div>
 
             @livewire('hero-section')
             @livewire('gallery-section')
