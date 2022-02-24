@@ -40,6 +40,7 @@
             @livewire('gallery-section')
             @livewire('service-section')
             @livewire('about-section')
+            @livewire('logo-clouds-section')
             @livewire('contact-section')
 
     </div>
